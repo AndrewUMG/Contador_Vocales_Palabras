@@ -1,0 +1,197 @@
+/* Variables de color */
+:root {
+  --color-principal: #1a1a2e;
+  --color-acento: #e94560;
+  --color-fondo: #f5f5f5;
+  --color-blanco: #ffffff;
+  --color-gris: #dee2e6;
+}
+
+/* Reset y layout general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--color-fondo);
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+}
+
+/* Encabezado */
+header {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Etiqueta con el atajo */
+.hint-f5 {
+  background-color: var(--color-acento);
+  color: white;
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-family: "Space Mono", monospace;
+  letter-spacing: 1px;
+}
+
+/* Contenido principal: dos columnas */
+.main-content {
+  display: flex;
+  height: calc(100vh - 46px);
+  gap: 0;
+}
+
+/* Columna izquierda: editor */
+.col-editor {
+  width: 55%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid var(--color-gris);
+  background: var(--color-blanco);
+}
+
+.col-editor label {
+  font-family: "Space Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--color-acento);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+#editor {
+  flex: 1;
+  resize: none;
+  border: 2px solid var(--color-gris);
+  border-radius: 6px;
+  padding: 12px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  color: var(--color-principal);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#editor:focus {
+  border-color: var(--color-acento);
+}
+
+/* Instrucción debajo del textarea */
+.instruccion {
+  margin-top: 8px;
+  font-size: 0.78rem;
+  color: #888;
+}
+
+.instruccion span {
+  background: var(--color-principal);
+  color: white;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-family: "Space Mono", monospace;
+  font-size: 0.7rem;
+}
+
+/* Columna derecha: resultados */
+.col-resultados {
+  width: 45%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: hidden;
+  background: var(--color-fondo);
+}
+
+/* Título de sección */
+.seccion-titulo {
+  font-family: "Space Mono", monospace;
+  font-size: 0.7rem;
+  color: var(--color-acento);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--color-gris);
+  padding-bottom: 4px;
+}
+
+/* Tablas de resultados */
+.tabla-resultados {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-blanco);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.tabla-resultados thead th {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  font-family: "Space Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  text-align: left;
+}
+
+.tabla-resultados tbody td {
+  padding: 7px 14px;
+  border-bottom: 1px solid var(--color-gris);
+  color: var(--color-principal);
+  font-weight: 500;
+}
+
+.tabla-resultados tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla-resultados .cantidad {
+  font-family: "Space Mono", monospace;
+  color: var(--color-acento);
+  font-weight: 700;
+  text-align: right;
+}
+
+/* Estado vacío antes de analizar */
+.estado-vacio {
+  text-align: center;
+  padding: 18px 0;
+  color: #bbb;
+  font-size: 0.82rem;
+}
+
+/* Animación fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animar {
+  animation: fadeIn 0.3s ease forwards;
+}
