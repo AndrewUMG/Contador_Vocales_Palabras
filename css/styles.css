@@ -20,14 +20,14 @@ body {
   overflow: hidden;
   background-color: var(--color-fondo);
   font-family: "DM Sans", sans-serif;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 /* Encabezado */
 header {
   background-color: var(--color-principal);
   color: var(--color-blanco);
-  padding: 8px 20px;
+  padding: 12px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,7 +35,7 @@ header {
 
 header h1 {
   font-family: "Space Mono", monospace;
-  font-size: 1rem;
+  font-size: 1.4rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -44,8 +44,8 @@ header h1 {
 .hint-f5 {
   background-color: var(--color-acento);
   color: white;
-  font-size: 0.7rem;
-  padding: 3px 10px;
+  font-size: 0.85rem;
+  padding: 6px 12px;
   border-radius: 4px;
   font-family: "Space Mono", monospace;
   letter-spacing: 1px;
@@ -54,14 +54,14 @@ header h1 {
 /* Contenido principal: dos columnas */
 .main-content {
   display: flex;
-  height: calc(100vh - 46px);
+  height: calc(100vh - 56px);
   gap: 0;
 }
 
 /* Columna izquierda: editor */
 .col-editor {
   width: 55%;
-  padding: 16px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   border-right: 2px solid var(--color-gris);
@@ -70,11 +70,11 @@ header h1 {
 
 .col-editor label {
   font-family: "Space Mono", monospace;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   color: var(--color-acento);
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 #editor {
@@ -82,12 +82,13 @@ header h1 {
   resize: none;
   border: 2px solid var(--color-gris);
   border-radius: 6px;
-  padding: 12px;
+  padding: 15px;
   font-family: "DM Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--color-principal);
   outline: none;
   transition: border-color 0.2s;
+  line-height: 1.6;
 }
 
 #editor:focus {
@@ -96,27 +97,28 @@ header h1 {
 
 /* Instrucción debajo del textarea */
 .instruccion {
-  margin-top: 8px;
-  font-size: 0.78rem;
+  margin-top: 10px;
+  font-size: 0.95rem;
   color: #888;
+  line-height: 1.5;
 }
 
 .instruccion span {
   background: var(--color-principal);
   color: white;
-  padding: 1px 6px;
+  padding: 3px 8px;
   border-radius: 3px;
   font-family: "Space Mono", monospace;
-  font-size: 0.7rem;
+  font-size: 0.85rem;
 }
 
 /* Columna derecha: resultados */
 .col-resultados {
   width: 45%;
-  padding: 16px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
   overflow: hidden;
   background: var(--color-fondo);
 }
@@ -124,13 +126,14 @@ header h1 {
 /* Título de sección */
 .seccion-titulo {
   font-family: "Space Mono", monospace;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: var(--color-acento);
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   border-bottom: 1px solid var(--color-gris);
-  padding-bottom: 4px;
+  padding-bottom: 6px;
+  font-weight: 600;
 }
 
 /* Tablas de resultados */
@@ -147,18 +150,20 @@ header h1 {
   background-color: var(--color-principal);
   color: var(--color-blanco);
   font-family: "Space Mono", monospace;
-  font-size: 0.72rem;
+  font-size: 0.9rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 8px 14px;
+  padding: 12px 16px;
   text-align: left;
+  font-weight: 600;
 }
 
 .tabla-resultados tbody td {
-  padding: 7px 14px;
+  padding: 11px 16px;
   border-bottom: 1px solid var(--color-gris);
   color: var(--color-principal);
   font-weight: 500;
+  font-size: 1rem;
 }
 
 .tabla-resultados tbody tr:last-child td {
@@ -175,9 +180,10 @@ header h1 {
 /* Estado vacío antes de analizar */
 .estado-vacio {
   text-align: center;
-  padding: 18px 0;
+  padding: 24px 0;
   color: #bbb;
-  font-size: 0.82rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* Animación fade-in */
